@@ -7,7 +7,7 @@ from boto.s3.connection import S3Connection
 from boto.s3.key import Key
 
 ## FIREBASE ACCESS INFO ##
-firebase_url = 'https://your-app.firebaseio.com/' #Or get from environment variable
+firebase_url = os.environ['FIREBASE_DB'] # 'https://your-app.firebaseio.com/'
 firebase_secret = os.environ['FIREBASE_SECRET']
 firebase_username = 'my-backup-app' #Username is not actually checked on firebase
 
