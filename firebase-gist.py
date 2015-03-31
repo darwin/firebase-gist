@@ -28,7 +28,7 @@ logger.info('==================================')
 logger.info('Fetching firebase data')
 f = connect_firebase()
 data = f.get(firebase_path, None)
-new_content = json.dumps(data, ensure_ascii=False, indent=2)
+new_content = json.dumps(data, ensure_ascii=False, indent=2, sort_keys=True)
 
 logger.info('Reading existing gist')
 gh = login(token=gh_token)
